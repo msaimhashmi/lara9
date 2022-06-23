@@ -27,6 +27,10 @@ Route::get('/', function () {
 	// return str('Hello World')->upper();
 	// return str('Hello World')->slug();
 
+	// In Laravel 9 (IMPROVE EXCEPTION PAGE)
+	throw new Exception("whoops");
+	
+
     return view('welcome');
 })->name('home');
 
