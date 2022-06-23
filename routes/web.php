@@ -28,8 +28,10 @@ Route::get('/', function () {
 	// return str('Hello World')->slug();
 
 	// In Laravel 9 (IMPROVE EXCEPTION PAGE)
-	throw new Exception("whoops");
+	// throw new Exception("whoops");
 	
+	// In laravel 9 (RENDER A BLADE STRING)
+	return Blade::render('{{$greeting}}, @if(true) world @else saim @endif', ['greeting' => 'Hello']);
 
     return view('welcome');
 })->name('home');
